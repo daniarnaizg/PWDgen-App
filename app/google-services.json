@@ -1,0 +1,41 @@
+{
+  "project_info": {
+    "project_number": "65666253045",
+    "firebase_url": "https://pwdgen-63a0a.firebaseio.com",
+    "project_id": "pwdgen-63a0a",
+    "storage_bucket": "pwdgen-63a0a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65666253045:android:fefd1ad0cf5bdc212dc5bc",
+        "android_client_info": {
+          "package_name": "com.pwdgen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65666253045-4iim7mte81lnv9am3cl8p216drcreq0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrAmnmOnxflXE6Lsbh28Y7q-cD3_5CHcg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65666253045-4iim7mte81lnv9am3cl8p216drcreq0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-1638623502605136~1709186504"
+    }
+  ],
+  "configuration_version": "1"
+}

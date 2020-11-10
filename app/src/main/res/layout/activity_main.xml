@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- TITULO -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        tools:ignore="RtlSymmetry">
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:src="@drawable/pwd_logo_nobg" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:paddingEnd="20dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:id="@+id/app_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/title_caps"
+                android:textColor="@color/colorAccent"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:onClick="reloadPasswords"
+                android:src="@drawable/refresh_peq" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- SEPARADOR -->
+<!--    <TextView-->
+<!--        style="?android:listSeparatorTextViewStyle"-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="10dp"-->
+<!--        android:layout_marginLeft="15dp"-->
+<!--        android:layout_marginRight="15dp" />-->
+
+    <!-- ADVIEW -->
+    <FrameLayout
+        android:id="@+id/ad_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+    </FrameLayout>
+
+    <!-- BOTONES -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <me.rishabhkhanna.customtogglebutton.CustomToggleButton
+            android:id="@+id/letter"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:checked="true"
+            android:textAllCaps="false"
+            android:textOff="@string/letter"
+            android:textOn="@string/letter"
+            android:textSize="20sp"
+            app:borderWidth="1dp"
+            app:checkedColor="@color/colorAccent"
+            app:checkedTextColor="@color/colorPrimary"
+            app:radius="3dp"
+            app:uncheckedColor="@color/colorAccent"
+            app:uncheckedTextColor="@color/colorAccent" />
+
+        <me.rishabhkhanna.customtogglebutton.CustomToggleButton
+            android:id="@+id/letter_caps"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:checked="true"
+            android:textOff="@string/letter_caps"
+            android:textOn="@string/letter_caps"
+            android:textSize="18sp"
+            app:borderWidth="1dp"
+            app:checkedColor="@color/colorAccent"
+            app:checkedTextColor="@color/colorPrimary"
+            app:radius="3dp"
+            app:uncheckedColor="@color/colorAccent"
+            app:uncheckedTextColor="@color/colorAccent" />
+
+        <me.rishabhkhanna.customtogglebutton.CustomToggleButton
+            android:id="@+id/numbers"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:checked="true"
+            android:textOff="@string/numbers"
+            android:textOn="@string/numbers"
+            android:textSize="18sp"
+            app:borderWidth="1dp"
+            app:checkedColor="@color/colorAccent"
+            app:checkedTextColor="@color/colorPrimary"
+            app:radius="3dp"
+            app:uncheckedColor="@color/colorAccent"
+            app:uncheckedTextColor="@color/colorAccent" />
+
+        <me.rishabhkhanna.customtogglebutton.CustomToggleButton
+            android:id="@+id/symbols"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:textOff="@string/symbols"
+            android:textOn="@string/symbols"
+            android:textSize="18sp"
+            app:borderWidth="1dp"
+            app:checkedColor="@color/colorAccent"
+            app:checkedTextColor="@color/colorPrimary"
+            app:radius="3dp"
+            app:uncheckedColor="@color/colorAccent"
+            app:uncheckedTextColor="@color/colorAccent" />
+
+        <!--        <ToggleButton-->
+        <!--            android:id="@+id/letter"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:gravity="center"-->
+        <!--            android:textOff="@string/letter"-->
+        <!--            android:textOn="@string/letter" />-->
+
+    </LinearLayout>
+
+    <!-- SLIDER 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        tools:ignore="RtlSymmetry">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:src="@drawable/arrow_hor" />
+
+        <TextView
+            android:id="@+id/tvSeekbar_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:maxWidth="60sp"
+            android:text="6"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp" />
+
+        <SeekBar
+            android:id="@+id/seekBar_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:max="32"
+            android:min="1"
+            android:progress="6" />
+
+    </LinearLayout>
+
+    <!-- SLIDER 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingBottom="0dp"
+        tools:ignore="RtlSymmetry">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:src="@drawable/arrow_ver" />
+
+        <TextView
+            android:id="@+id/tvSeekbar_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="4"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp" />
+
+        <SeekBar
+            android:id="@+id/seekBar_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:max="8"
+            android:min="1"
+            android:progress="4" />
+
+    </LinearLayout>
+
+    <!-- ZONA TEXTO -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <LinearLayout
+            android:id="@+id/pwd_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

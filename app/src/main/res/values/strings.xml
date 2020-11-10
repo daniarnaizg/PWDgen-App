@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PWDgen</string>
+    <string name="letter">a-z</string>
+    <string name="letter_caps">A-Z</string>
+    <string name="numbers">0-9</string>
+    <string name="symbols">#!?</string>
+    <string name="title_caps">PWDGEN</string>
+</resources>
